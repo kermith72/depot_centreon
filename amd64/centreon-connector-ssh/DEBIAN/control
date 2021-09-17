@@ -1,0 +1,9 @@
+Package: centreon-connector-ssh
+Version: 21.04.2-1
+Section: net
+Priority: extra
+Architecture: amd64
+Depends: centreon-clib (>= 21.04.2), libssh2-1 (>= 1.8.0), libgcrypt20 (>= 1.8.4)
+Installed-Size: 1424
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: SSH connector for Centreon Engine.

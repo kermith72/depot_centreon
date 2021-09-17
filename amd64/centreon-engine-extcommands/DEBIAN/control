@@ -1,0 +1,12 @@
+Architecture: amd64
+Conflicts: nagios3, icinga
+Depends: centreon-daemon (>= 21.04.3)
+Description: Centreon Engine External Commands allow to other applications to send command into the daemon.
+      Centreon Engine is a monitoring engine fully Nagios-compatible but with additionnal features and performance improvements.
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Package: centreon-engine-extcommands
+Priority: extra
+Section: net
+Version: 21.04.3-1
+Installed-Size: 916
+

@@ -1,0 +1,10 @@
+Architecture: amd64
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:3.0), libstdc++6 (>= 6)
+Description: Centreon C/C++ library used in multiple monitoring-related projects.
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Package: centreon-clib
+Priority: extra
+Section: net
+Version: 21.04.2-1
+Installed-Size: 868
+

@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+    configure)
+    	if [ "centreon-engine" != "root" ]; then
+        	if ! $(grep -E "^centreon-engine:" /etc/group > /dev/null ) ; then
+            	groupadd -f "centreon-engine"
+        	fi
+    	fi
+
+    	if [ "centreon-engine" != "root" ]; then
+        	if ! $(grep -E "^centreon-engine:" /etc/passwd > /dev/null ) ; then
+            	useradd -d "/var/lib/centreon-engine" -M -r -c "Centreon-engine Admin" -g "centreon-engine" -s /bin/bash "centreon-engine"
+        	fi
+    	fi
+
+
+    	if [ -f "/lib/systemd/system/centengine.service" ]; then
+        	systemctl daemon-reload
+        	systemctl enable centengine.service
+    	fi
+
+
+
+
+    	#add permission directory /etc/centreon-engine
+    	if [ -d "/etc/centreon-engine" ]; then
+        	chown -R centreon-engine:centreon-engine /etc/centreon-engine
+        	chmod 775 /etc/centreon-engine
+        	chmod 664 /etc/centreon-engine/*
+           chmod 775 /etc/centreon-engine/objects
+    	fi
+
+
+    	#add permission /var/lib/centreon-engine
+    	if [ -d "/var/lib/centreon-engine" ]; then
+        	chown -R centreon-engine:centreon-engine /var/lib/centreon-engine
+    	fi
+
+
+    	#create /var/log/centreon-engine/archives
+    	if [ ! -d "/var/log/centreon-engine/archives" ]; then
+        	mkdir -p /var/log/centreon-engine/archives
+    	fi
+
+	;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+
+    *)
+	echo "$0: called with unknown argument" 1>&2
+	exit 0
+	;;
+esac
+
+exit 0

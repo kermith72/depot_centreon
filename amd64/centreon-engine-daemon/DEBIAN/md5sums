@@ -1,0 +1,16 @@
+1e2b7cdbd3ee13fee3f8ebced1df3074  lib/systemd/system/centengine.service
+7e32d8e1e002ae9cc9c75648066c24c9  etc/centreon-engine/objects/timeperiods.cfg
+a331cb9b3b286d4c2b67ef3c506bc9ca  etc/centreon-engine/objects/localhost.cfg
+d9fddc19f2b5020798d933706ba2d835  etc/centreon-engine/objects/switch.cfg
+d65b78719bead591875fd0f09da57b1c  etc/centreon-engine/objects/templates.cfg
+80b0e189ef63ec39880dab1eb81c9ea2  etc/centreon-engine/objects/contacts.cfg
+2014f775945b6327094816a934767fcf  etc/centreon-engine/objects/commands.cfg
+952c45a9946558ca2b33ed84fe4d5b0f  etc/centreon-engine/objects/windows.cfg
+32d50c58838e4f73ee7cd95ec06387ab  etc/centreon-engine/objects/printer.cfg
+7bc819e4636b727b8e97a0b718db5e3c  etc/centreon-engine/resource.cfg
+86b0c13793dad671dc0ed84918f7d3e7  etc/centreon-engine/centengine.cfg
+7965a04b7cf486a9df59f25b51f057de  etc/logrotate.d/centengine
+404135e8e1128c1f980bfd1ae8bd385b  usr/sbin/centenginestats
+aa892530873f5c06380ae88a735745d4  usr/sbin/centengine
+4c4203caac58013115c9ca4b85f296ae  usr/share/doc/centreon-engine-daemon/license.txt
+d41d8cd98f00b204e9800998ecf8427e  var/log/centreon-engine/centengine.debug

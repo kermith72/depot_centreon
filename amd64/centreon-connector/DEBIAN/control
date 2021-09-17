@@ -1,0 +1,9 @@
+Package: centreon-connector
+Version: 21.04.2-1
+Section: net
+Priority: extra
+Architecture: amd64
+Depends: centreon-connector-ssh (>= 21.04.2), centreon-connector-perl (>= 21.04.2)
+Installed-Size: 16
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: connectors for Centreon Engine.

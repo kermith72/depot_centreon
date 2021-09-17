@@ -1,0 +1,9 @@
+Package: centreon-engine
+Version: 21.04.3-1
+Section: net
+Priority: extra
+Architecture: amd64
+Depends: centreon-engine-extcommands (>= 21.04.3)
+Installed-Size: 0
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: Centreon Engine is a monitoring engine fully Nagios-compatible but with additionnal features and performance improvements.
