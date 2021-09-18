@@ -4,7 +4,7 @@ Section: net
 Priority: extra
 Architecture: all
 Installed-Size: 16
-Depends: centreon-base-config-centreon-engine (>= 21.04.5), centreon-database (>= 21.04.5)
+Depends: centreon-base-config-centreon-engine (>= 21.04.5), centreon-database (>= 21.04.5), centreon-widgets (>= 21.04.0)
 Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
 Description: Centreon Central with database
    The package Centreon Standalone with database and centreon-poller

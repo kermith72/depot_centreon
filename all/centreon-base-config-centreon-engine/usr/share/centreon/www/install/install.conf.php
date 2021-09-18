@@ -54,8 +54,8 @@ $conf_centreon['monitoring_group'] = "centreon-engine";
 $conf_centreon['monitoring_etc'] = "/etc/centreon-engine";
 $conf_centreon['monitoring_binary'] = "/usr/sbin/centengine";
 $conf_centreon['monitoring_varlog'] = "/var/log/centreon-engine";
-$conf_centreon['plugin_dir'] = "";
+$conf_centreon['plugin_dir'] = "/usr/lib/nagios/plugins";
 $conf_centreon['centreon_engine_connectors'] = "/usr/lib/centreon-connector";
-$conf_centreon['centreon_plugins'] = "";
+$conf_centreon['centreon_plugins'] = "/usr/lib/centreon/plugins";
 
 ?>

@@ -3,7 +3,7 @@ Version: 21.04.5-1
 Section: net
 Priority: extra
 Architecture: all
-Depends: centreon-perl-libs (>=21.05.4 )
+Depends: centreon-perl-libs (>=21.04.5 ), snmp, snmpd, snmptrapd, libnet-snmp-perl, libsnmp-perl, libmodule-build-perl, libmodule-install-perl
 Installed-Size: 112
 Maintainer: Eric Coquard <eric.coquard@gmail.com>
 Description: Centreon Traps

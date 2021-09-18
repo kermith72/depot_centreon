@@ -43,6 +43,9 @@ case "$1" in
                 chmod 775 /etc/centreon-gorgone/config.d
         fi
 
+        if [ -d "/var/cache/centreon-gorgone" ]; then
+                chown -R centreon-gorgone:centreon-gorgone /etc/centreon-gorgone
+        fi
 
     	if [ -f "/lib/systemd/system/gorgoned.service" ]; then
         	systemctl daemon-reload

@@ -3,7 +3,7 @@ Version: 21.04.5-1
 Section: net
 Priority: extra
 Architecture: all
-Installed-Size: 56
+Installed-Size: 68
 Depends: centreon-broker (>= 21.04.3), centreon-broker-cbmod (>= 21.04.3), centreon-broker-storage (>= 21.04.3), centreon-connector (>= 21.04.2), centreon-engine (>= 21.04.3), centreon-common (>= 21.04.5), centreon-gorgone-config (>=21.04.2), centreon-trap (>=21.04.5), centreon-plugins (>=20210915), centreon-perl-libs (>=21.04.5), sudo ( >=1.8.27), nagios-plugins-basic
 Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
 Description: This package add rights and default directories for a poller

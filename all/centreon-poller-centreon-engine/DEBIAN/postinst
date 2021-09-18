@@ -36,6 +36,7 @@ case "$1" in
 
     	if [ -d "/var/cache/centreon" ]; then
         	chown -R centreon:centreon /var/cache/centreon
+		chmod -R g+w /var/cache/centreon
         	chmod -R g+s /var/cache/centreon/config
     	fi
 
@@ -52,6 +53,11 @@ case "$1" in
         if [ -d "/var/log/centreon" ]; then
                 chown centreon:centreon /var/log/centreon
                 chmod 775 /var/log/centreon
+        fi
+
+       if [ -d "/var/lib/centreon/centplugins" ]; then
+                chown centreon:centreon /var/lib/centreon/centplugins
+                chmod 775 /var/lib/centreon/centplugins
         fi
 
     	;;
