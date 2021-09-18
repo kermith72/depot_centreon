@@ -41,6 +41,13 @@ dbbe58a151ead3bef939856f8f80b2fa  usr/share/centreon/www/widgets/host-monitoring
 b19b3acdfe933e1afa74e2a4a8ffff12  usr/share/centreon/www/widgets/host-monitoring/resources/centreon-logo.png
 d7f651a03b6d46e53138b466502b0210  usr/share/centreon/www/widgets/host-monitoring/configs.xml
 047d48810662952f290fc253eb11a6fc  usr/share/centreon/www/widgets/host-monitoring/data.js
+4ee3fbf1666ea27e32a66e4d1838ba95  usr/share/centreon/www/widgets/global-health/src/global_health.php
+b50dcca3edfe703b261bd1fdbe616ea6  usr/share/centreon/www/widgets/global-health/src/global_health_host.ihtml
+eae2a304eb381b960ed31daf7e12d87a  usr/share/centreon/www/widgets/global-health/src/global_health_service.ihtml
+0a0be99fc5c5e6f577a43494261d0b68  usr/share/centreon/www/widgets/global-health/index.php
+b2dc750c9a6b7e3adb25c92622404d6e  usr/share/centreon/www/widgets/global-health/lib/apexcharts.min.js
+f0a3eba4191c1f8e6d0aef2f6d1c40c9  usr/share/centreon/www/widgets/global-health/resources/centreon-logo.png
+0d134c0ae1e41552dbd419e9857a95bc  usr/share/centreon/www/widgets/global-health/configs.xml
 4d3e39a1adc40804bc6adc40e31b6277  usr/share/centreon/www/widgets/servicegroup-monitoring/src/class/ServicegroupMonitoring.class.php
 dc0ed2072949690eca5b3f10b6c8fd62  usr/share/centreon/www/widgets/servicegroup-monitoring/src/export.php
 7b649a74fc5a892787d7875875a969bc  usr/share/centreon/www/widgets/servicegroup-monitoring/src/index.ihtml

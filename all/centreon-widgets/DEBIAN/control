@@ -3,6 +3,6 @@ Version: 21.04.0-1
 Section: net
 Priority: extra
 Architecture: all
-Installed-Size: 836
+Installed-Size: 1324
 Maintainer: Eric Coquard <eric.coquard@gmail.com>
 Description: Centreon Widgets
