@@ -1,0 +1,9 @@
+8597619b808f71dbd4ecd6cc6e0a01ff  etc/logrotate.d/cbd
+e8d72fc3b722681be730146593dcdfb9  usr/share/centreon/lib/centreon-broker/70-lua.so
+dd97cd2713b46c0f20ca82513d56f5a6  usr/share/centreon/lib/centreon-broker/20-bam.so
+6811c73e91f16743a7d94f7a2e100ac9  usr/share/centreon/lib/centreon-broker/50-tcp.so
+bc27d7909c05d4e1c2f7acd470afdba5  usr/share/centreon/lib/centreon-broker/80-sql.so
+110d5e868617ef0a47dccb3487a890d3  usr/share/centreon/lib/centreon-broker/10-neb.so
+11503c2ea02264a1b58eceab80a374a1  usr/share/centreon/lib/centreon-broker/15-stats.so
+add0e6729f85f2c055d1c47aef328278  usr/share/centreon/lib/centreon-broker/60-tls.so
+3b83ef96387f14655fc854ddc3c6bd57  usr/share/doc/centreon-broker-21.04.3/LICENSE

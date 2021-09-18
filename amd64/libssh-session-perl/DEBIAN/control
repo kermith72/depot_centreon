@@ -1,0 +1,8 @@
+Package: libssh-session-perl
+Version: 0.80.2-1
+Section: net
+Priority: extra
+Architecture: amd64
+Installed-Size: 436
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: perl interface to the libssh library

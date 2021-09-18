@@ -1,0 +1,9 @@
+Package: centreon-gorgone-config
+Version: 21.04.2-1
+Depends: centreon-gorgone (>= 21.04.2)
+Section: net
+Priority: extra
+Architecture: all
+Installed-Size: 60
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: Perl daemon task handlers for Centreon - config

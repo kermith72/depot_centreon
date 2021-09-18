@@ -1,0 +1,11 @@
+[Unit]
+Description=Cgroup Centreon
+
+[Service]
+Type=oneshot
+ExecStart=/bin/true
+ExecReload=/bin/true
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

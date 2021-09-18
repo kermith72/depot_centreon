@@ -1,0 +1,11 @@
+Architecture: amd64
+Depends: centreon-clib (>= 21.04.2), centreon-broker-storage (>= 21.04.3), libc6 (>= 2.25), libgcc1 (>= 1:3.0), libgnutls30 (>= 3.6.6), liblua5.3-0, librrd8 (>= 1.3.0), libstdc++6 (>= 7)
+Description: Centreon Broker is a monitoring addon fully compatible with Nagios and Centreon Engine.
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Package: centreon-broker-core
+Priority: extra
+Recommends: centreon-engine (>= 21.04.3)
+Section: net
+Version: 21.04.3-1
+Installed-Size: 15768
+

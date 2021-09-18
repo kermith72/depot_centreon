@@ -1,0 +1,16 @@
+Centreon\Domain\Monitoring\ResourceFilter:
+    properties:
+        types:
+            type: array<string>
+        states:
+            type: array<string>
+        statuses:
+            type: array<string>
+        hostgroupIds:
+            type: array<int>
+        servicegroupIds:
+            type: array<int>
+        monitoringServerIds:
+            type: array<int>
+        onlyWithPerformanceData:
+            type: boolean

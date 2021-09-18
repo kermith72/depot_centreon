@@ -1,0 +1,9 @@
+Package: centreon-common
+Version: 21.04.5-1
+Section: net
+Priority: extra
+Architecture: all
+Installed-Size: 88
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: Centreon common package
+   Add user and group for Centreon and this suite.

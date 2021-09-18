@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+	configure)
+    	if [ "centreon-broker" != "root" ]; then
+        	if ! $(grep -E "^centreon-broker:" /etc/group > /dev/null ) ; then
+            	groupadd -f "centreon-broker"
+        	fi
+    	fi
+
+
+    	if [ "centreon-broker" != "root" ]; then
+        	if ! $(grep -E "^centreon-broker:" /etc/passwd > /dev/null ) ; then
+            	useradd -d "/var/lib/centreon-broker" -M -r -N -g "centreon-broker" -s /bin/bash "centreon-broker"
+        	fi
+    	fi
+
+        if [ "centreon-broker" != "root" ]; then
+                if $(grep -E "^centreon-engine:" /etc/passwd > /dev/null ) ; then
+                usermod -aG "centreon-broker" "centreon-engine"
+                if $(grep -E "^centreon-engine:" /etc/group > /dev/null ) ; then
+                usermod -aG "centreon-engine" "centreon-broker"
+                fi
+
+                fi
+        fi
+
+    	if [ -d "/etc/centreon-broker" ]; then
+        	chown -R centreon-broker:centreon-broker /etc/centreon-broker
+        	chmod 775 /etc/centreon-broker
+    	fi
+
+
+    	;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+    	;;
+
+	*)
+    	echo "$0: called with unknown argument" 1>&2
+    	exit 0
+    	;;
+esac
+
+exit 0

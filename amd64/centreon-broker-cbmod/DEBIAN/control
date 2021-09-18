@@ -1,0 +1,11 @@
+Architecture: amd64
+Depends: centreon-broker-core (>= 21.04.3)
+Description: chmod is a centreon-broker NEB module.
+     Centreon Broker is a monitoring addon fully compatible with Nagios and Centreon Engine.
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Package: centreon-broker-cbmod
+Priority: extra
+Section: net
+Version: 21.04.3-1
+Installed-Size: 17888
+

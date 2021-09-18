@@ -1,0 +1,2 @@
+e40714ebaa245e0c89d22292afbeb72d  etc/mysql/conf.d/centreon.cnf
+b172f4e527532c4963d423ac1efde462  etc/systemd/system/mariadb.service.d/centreon.conf

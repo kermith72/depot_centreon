@@ -1,0 +1,6 @@
+af250709c33751c58bc10571ee8aa590  lib/systemd/system/cbd.service
+e21d17cbb81578df0708379136e0eca1  etc/centreon-broker/central-broker.json
+62fc22609a92fdbeca6ca9c6ffada8d8  etc/centreon-broker/watchdog.json
+7ebf7b175672d63d93f6e73eaddab867  etc/centreon-broker/central-rrd.json
+f4bc554d4defbf75e3fabf79259f2af6  usr/sbin/cbwd
+d1c9853620a2573a3ac752ccabad509c  usr/sbin/cbd

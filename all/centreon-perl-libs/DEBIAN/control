@@ -1,0 +1,10 @@
+Package: centreon-perl-libs
+Version: 21.04.5-1
+Section: net
+Priority: extra
+Architecture: all
+Depends: perl, libdbi-perl, libfindbin-libs-perl, libgetopt-long-descriptive-perl, libio-handle-util-perl, perl-doc
+Installed-Size: 472
+Maintainer: Eric Coquard <eric.coquard@gmail.com>
+Description: Centreon Perl libraries
+   This packages contains Centreon Perl libraries.

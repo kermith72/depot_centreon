@@ -1,0 +1,11 @@
+Package: centreon-base-config-centreon-engine
+Version: 21.04.5-1
+Section: net
+Priority: extra
+Architecture: all
+Installed-Size: 60
+Depends: centreon-poller-centreon-engine (>= 21.04.5), centreon-broker-cbd (>= 21.04.3), centreon-web (>= 21.04.5)
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: The package contains base configuration for Centreon Engine and Centreon Broker.
+	It provides one default monitoring engine running with Centreon Engine and
+	two Centreon Broker instances to store real-time information in database and erformance data in RRD files.

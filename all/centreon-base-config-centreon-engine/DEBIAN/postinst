@@ -1,0 +1,75 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+        configure)
+    	if  $(grep -E "^www-data:" /etc/passwd > /dev/null ) ; then
+         	usermod -aG "centreon,centreon-gorgone,centreon-engine,centreon-broker" "www-data"
+         	usermod -aG "www-data" "centreon-gorgone"
+         	usermod -aG "www-data" "centreon"
+    	fi
+
+        if [ -f "/usr/share/centreon/bin/centreon" ]; then
+                ln -s /usr/share/centreon/bin/centreon /usr/bin/centreon
+                chown -h centreon: /usr/bin/centreon
+        fi
+
+    	if [ -d "/usr/share/centreon/api" ]; then
+        	chown -R centreon:centreon /usr/share/centreon/api
+        	chmod -R 775 /usr/share/centreon/api
+    	fi
+
+    	if [ -d "/usr/share/centreon/cron" ]; then
+        	chmod -R 775 /usr/share/centreon/cron
+    	fi
+
+    	if [ -d "/usr/share/centreon/examples" ]; then
+        	chmod 775 /usr/share/centreon/examples
+    	fi
+
+    	if [ -d "/usr/share/centreon/bin" ]; then
+		chown centreon:centreon /usr/share/centreon/bin/centreon
+		chown centreon:centreon /usr/share/centreon/bin/console
+		chown centreon:centreon /usr/share/centreon/bin/export-mysql-indexes
+		chown centreon:centreon /usr/share/centreon/bin/import-mysql-indexes
+	fi
+
+    	if [ -d "/usr/share/centreon/GPL_LIB/SmartyCache" ]; then
+        	chown -R centreon:centreon /usr/share/centreon/GPL_LIB/SmartyCache
+        	chmod -R 775 /usr/share/centreon/GPL_LIB/SmartyCache
+    	fi
+
+    	if [ -d "/usr/share/centreon/src" ]; then
+        	chown -R centreon:centreon /usr/share/centreon/src
+        	chmod -R 775 /usr/share/centreon/api
+    	fi
+
+    	if [ -d "/usr/share/centreon/www" ]; then
+        	chown -R centreon:centreon /usr/share/centreon/www
+        	chmod -R 775 /usr/share/centreon/www
+    	fi
+
+    	if [ -d "/var/lib/centreon" ]; then
+        	chown -R centreon:centreon /var/lib/centreon
+        	chmod -R 775 /var/lib/centreon
+    	fi
+
+    	if [ -d "/etc/centreon/config.d" ]; then
+        	chown centreon:centreon /etc/centreon/config.d
+		chmod 775 /etc/centreon/config.d
+    	fi
+
+        ;;
+
+        abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+
+        *)
+        echo "$0: called with unknown argument" 1>&2
+        exit 0
+        ;;
+esac
+
+exit 0

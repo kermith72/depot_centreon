@@ -1,0 +1,9 @@
+Package: centreon-gorgone
+Version: 21.04.2-1
+Depends: zmq-libzmq4-perl (>= 1.00.0), libssh-session-perl (>= 0.80.2), libcryptx-perl, libschedule-cron-perl, libcrypt-cbc-perl, libcpanel-json-xs-perl, libjson-pp-perl, libyaml-perl, libyaml-libyaml-perl, libdbd-sqlite3-perl, libdbd-mysql-perl, libapache-dbi-perl, libdata-uuid-perl, libhttp-daemon-perl, libhttp-message-perl, libmime-base64-urlsafe-perl, libdigest-md5-file-perl, libwww-curl-perl, libio-socket-ssl-perl, libnetaddr-ip-perl, libhash-merge-perl
+Section: net
+Priority: extra
+Architecture: all
+Installed-Size: 1352
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: Perl daemon task handlers for Centreon

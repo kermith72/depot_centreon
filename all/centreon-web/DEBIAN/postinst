@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+	configure)
+
+
+        if [ -f "/usr/bin/pear" ]; then
+		/usr/bin/pear install --force --alldeps db  >/dev/null
+	fi
+
+
+	 if [ -f "/etc/apache2/conf-available/centreon.conf" ]; then
+        	a2enconf centreon.conf
+		a2enmod headers
+		a2enmod proxy_fcgi setenvif proxy rewrite
+		a2enconf php7.3-fpm
+		a2dismod php7.3
+		systemctl restart apache2 php7.3-fpm
+   	 fi
+
+    	if [ -f "/etc/init.d/cron" ]; then
+        	service cron restart
+    	fi
+
+
+
+    	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+    	;;
+
+	*)
+    	echo "$0: called with unknown argument" 1>&2
+    	exit 0
+    	;;
+esac
+
+exit 0

@@ -1,0 +1,5 @@
+39b9f40994b5d2693c321dac2084db43  lib/systemd/system/centreontrapd.service
+f0d56d9a697085b4ff96e17ec70ff967  etc/default/centreontrapd
+47e86ec0d96ab6a5ad6cca2918b82da6  usr/share/centreon/bin/centreontrapd
+4e31eb1e74d4cf5d8ec87fee0dd4bbd5  usr/share/centreon/bin/centreontrapdforward
+7d5c6debcbf99f60f6a601ebdb7f9950  tmp/snmptrapd.conf

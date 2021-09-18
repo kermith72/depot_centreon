@@ -1,0 +1,8 @@
+Package: libzmq-constants-perl
+Version: 1.04.0-1
+Section: net
+Priority: extra
+Architecture: all
+Installed-Size: 80
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: library ZMQ-contants for perl

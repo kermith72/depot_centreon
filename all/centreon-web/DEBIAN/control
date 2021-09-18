@@ -1,0 +1,10 @@
+Package: centreon-web
+Version: 21.04.5-1
+Section: net
+Priority: extra
+Architecture: all
+Installed-Size: 72636
+Depends: php, php7.3-opcache, libapache2-mod-php, php-mysql, php-curl, php-json, php-gd, php-intl, php-mbstring, php-xml, php-zip, php-fpm, php-readline, ntp, rrdtool, php-sqlite3, php-pear, sudo, tofrodos, bsd-mailx, lsb-release, mariadb-server, libconfig-inifiles-perl, libcrypt-des-perl, librrds-perl, libdigest-hmac-perl, libdigest-sha-perl, libgd-perl, php-ldap, php-snmp, php7.3-dba, php-date
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: Centreon WebUI
+   This package contains WebUI files.

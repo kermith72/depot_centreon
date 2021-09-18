@@ -1,0 +1,64 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+	configure)
+
+    	if [ "centreon-gorgone" != "root" ]; then
+        	if ! $(grep -E "^centreon-gorgone:" /etc/group > /dev/null ) ; then
+            	groupadd -f "centreon-gorgone"
+        	fi
+    	fi
+
+
+    	if [ "centreon-gorgone" != "root" ]; then
+        	if ! $(grep -E "^centreon-gorgone:" /etc/passwd > /dev/null ) ; then
+            	useradd -d "/var/lib/centreon-gorgone" -M -N -g "centreon-gorgone" -s /bin/bash "centreon-gorgone"
+        	fi
+    	fi
+
+    	if  $(grep -E "^centreon-gorgone:" /etc/passwd > /dev/null ) ; then
+         	usermod -aG "centreon-engine" "centreon-gorgone"
+         	usermod -aG "centreon-broker" "centreon-gorgone"
+         	if $(grep -E "^centreon-gorgone:" /etc/group > /dev/null ) ; then
+             	usermod -aG "centreon-gorgone" "centreon-engine"
+             	usermod -aG "centreon-gorgone" "centreon-broker"
+         	fi
+    	fi
+
+        if [ -d "/var/lib/centreon-gorgone" ]; then
+                chown centreon-gorgone:centreon-gorgone /var/lib/centreon-gorgone
+                chmod 775 /var/lib/centreon-gorgone
+        fi
+
+        if [ -d "/var/log/centreon-gorgone" ]; then
+                chown centreon-gorgone:centreon-gorgone /var/log/centreon-gorgone
+                chmod 775 /var/log/centreon-gorgone
+        fi
+
+        if [ -d "/etc/centreon-gorgone" ]; then
+                chown -R centreon-gorgone:centreon-gorgone /etc/centreon-gorgone
+                chmod 775 /etc/centreon-gorgone/config.d
+        fi
+
+
+    	if [ -f "/lib/systemd/system/gorgoned.service" ]; then
+        	systemctl daemon-reload
+        	systemctl enable gorgoned.service
+    	fi
+
+
+    	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+    	;;
+
+	*)
+    	echo "$0: called with unknown argument" 1>&2
+    	exit 0
+    	;;
+esac
+
+exit 0

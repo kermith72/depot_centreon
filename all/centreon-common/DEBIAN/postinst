@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+	configure)
+
+    	if [ -f "/lib/systemd/system/centreon.service" ]; then
+        	systemctl daemon-reload
+        	systemctl enable centreon.service
+    	fi
+
+
+    	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+    	;;
+
+	*)
+    	echo "$0: called with unknown argument" 1>&2
+    	exit 0
+    	;;
+esac
+
+exit 0

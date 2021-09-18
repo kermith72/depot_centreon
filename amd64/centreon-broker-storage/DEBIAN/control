@@ -1,0 +1,11 @@
+Architecture: amd64
+Depends: centreon-broker-core (>= 21.04.3)
+Description: Centreon Broker's shared library for perfdata storage.
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Package: centreon-broker-storage
+Priority: extra
+Recommends: centreon-engine (>= 21.04.3)
+Section: net
+Version: 21.04.3-1
+Installed-Size: 4844
+

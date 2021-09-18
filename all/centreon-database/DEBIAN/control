@@ -1,0 +1,10 @@
+Package: centreon-database
+Version: 21.04.5-1
+Section: net
+Priority: extra
+Architecture: all
+Installed-Size: 52
+Depends: mariadb-server ( >=10.0)
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: mariaDB database for Centreon
+   The package databases for Centreon

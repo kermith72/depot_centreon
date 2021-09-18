@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+	configure)
+
+    	if [ -d "/etc/centreon-broker" ]; then
+        	chown -R centreon-broker:centreon-broker /etc/centreon-broker
+        	chmod 775 /etc/centreon-broker
+    	fi
+
+    	if [ -d "/var/lib/centreon-broker" ]; then
+        	chown centreon-broker:centreon-broker /var/lib/centreon-broker
+        	chmod 775 /var/lib/centreon-broker
+    	fi
+
+    	if [ -d "/var/log/centreon-broker" ]; then
+        	chown centreon-broker:centreon-broker /var/log/centreon-broker
+        	chmod 775 /var/log/centreon-broker
+    	fi
+
+    	;;
+	abort-upgrade|abort-remove|abort-deconfigure)
+    	;;
+
+	*)
+    	echo "$0: called with unknown argument" 1>&2
+    	exit 0
+    	;;
+esac
+
+exit 0

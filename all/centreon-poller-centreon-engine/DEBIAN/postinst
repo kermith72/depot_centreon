@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# Abort if any command returns an error value
+set -e
+
+case "$1" in
+	configure)
+    	if [ "centreon" != "root" ]; then
+        	if ! $(grep -E "^centreon:" /etc/group > /dev/null ) ; then
+            	groupadd -f "centreon"
+        	fi
+    	fi
+
+
+    	if [ "centreon" != "root" ]; then
+        	if ! $(grep -E "^centreon:" /etc/passwd > /dev/null ) ; then
+            	useradd -d "/var/lib/centreon" -M -N -g "centreon" -s /bin/bash "centreon"
+        	fi
+    	fi
+
+    	if  $(grep -E "^centreon:" /etc/passwd > /dev/null ) ; then
+         	usermod -aG "centreon-engine" "centreon"
+         	usermod -aG "centreon-gorgone" "centreon"
+		usermod -aG "centreon-broker" "centreon"
+         	if $(grep -E "^centreon:" /etc/group > /dev/null ) ; then
+             	usermod -aG "centreon" "centreon-broker"
+             	usermod -aG "centreon" "centreon-engine"
+             	usermod -aG "centreon" "centreon-gorgone"
+         	fi
+    	fi
+
+    	if [ -d "/etc/centreon" ]; then
+        	chown centreon:centreon /etc/centreon
+        	chmod 775 /etc/centreon
+    	fi
+
+    	if [ -d "/var/cache/centreon" ]; then
+        	chown -R centreon:centreon /var/cache/centreon
+        	chmod -R g+s /var/cache/centreon/config
+    	fi
+
+    	if [ -d "/etc/snmp/centreon_traps" ]; then
+        	chown centreon:centreon /etc/snmp/centreon_traps
+        	chmod 775 /etc/snmp/centreon_traps
+    	fi
+
+    	if [ -d "/var/spool/centreontrapd" ]; then
+        	chown centreon:centreon /var/spool/centreontrapd
+        	chmod 775 /var/spool/centreontrapd
+    	fi
+
+        if [ -d "/var/log/centreon" ]; then
+                chown centreon:centreon /var/log/centreon
+                chmod 775 /var/log/centreon
+        fi
+
+    	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+    	;;
+
+	*)
+    	echo "$0: called with unknown argument" 1>&2
+    	exit 0
+    	;;
+esac
+
+exit 0
+

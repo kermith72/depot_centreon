@@ -1,0 +1,10 @@
+Package: centreon-plugins
+Version: 20210915-1
+Section: net
+Priority: extra
+Architecture: all
+Depends: libxml-libxml-perl, libjson-perl, libwww-perl, libxml-xpath-perl, libnet-telnet-perl, libnet-ntp-perl, libnet-dns-perl, libnet-ldap-perl, libdbi-perl, libdbd-mysql-perl, libdbd-pg-perl, libdatetime-perl, liburi-encode-perl, libdate-manip-perl
+Installed-Size: 169344
+Maintainer: Eric Coquard <eric.coquard@gmail.com>
+Description: Centreon plugins
+   This package contains centreon plugins

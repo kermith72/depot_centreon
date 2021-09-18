@@ -1,0 +1,9 @@
+Package: zmq-libzmq4-perl
+Depends: libzmq-constants-perl, libzmq3-dev, libssh-dev, libextutils-makemaker-cpanfile-perl, libmodule-build-perl, libmodule-install-perl
+Version: 1.00.0-1
+Section: net
+Priority: extra
+Architecture: amd64
+Installed-Size: 488
+Maintainer: Eric Coquard <eric.coquard@sugarbug.fr>
+Description: library ZMQ4 for perl

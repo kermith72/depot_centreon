@@ -1,0 +1,3 @@
+60e3f4e4dc8b9d791bb3341ced934f44  etc/sudoers.d/centreon
+736bcf2b59938f332ac36cc9ee4e8315  etc/centreon/centreontrapd.pm
+d41d8cd98f00b204e9800998ecf8427e  etc/centreon/conf.pm
